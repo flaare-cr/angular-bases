@@ -3,9 +3,10 @@ import { v4 as uuid } from 'uuid';
 import { Character } from '../../interfaces/character.interface';
 
 @Component({
-  selector: 'dbz-add-character',
-  templateUrl: './add-character.component.html',
-  styleUrl: './add-character.component.css'
+    selector: 'dbz-add-character',
+    templateUrl: './add-character.component.html',
+    styleUrl: './add-character.component.css',
+    standalone: false
 })
 export class AddCharacterComponent {
   @Output()

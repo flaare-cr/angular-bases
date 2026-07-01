@@ -3,9 +3,10 @@ import { v4 as uuid } from 'uuid';
 import { Character } from '../../interfaces/character.interface';
 
 @Component({
-  selector: 'dbz-list',
-  templateUrl: './list.component.html',
-  styleUrl: './list.component.css',
+    selector: 'dbz-list',
+    templateUrl: './list.component.html',
+    styleUrl: './list.component.css',
+    standalone: false
 })
 export class ListComponent {
 
