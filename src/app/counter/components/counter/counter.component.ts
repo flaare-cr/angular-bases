@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 
 @Component({
@@ -10,6 +10,7 @@ import { Component } from "@angular/core";
     <button (click)="resetCounter()">Reset</button>
     <button (click)="increaseBy(-1)">-1</button>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class CounterComponent {

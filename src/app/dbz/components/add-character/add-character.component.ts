@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, ChangeDetectionStrategy } from '@angular/core';
 import { v4 as uuid } from 'uuid';
 import { Character } from '../../interfaces/character.interface';
 
@@ -6,6 +6,7 @@ import { Character } from '../../interfaces/character.interface';
     selector: 'dbz-add-character',
     templateUrl: './add-character.component.html',
     styleUrl: './add-character.component.css',
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class AddCharacterComponent {
