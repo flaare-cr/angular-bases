@@ -1,20 +1,25 @@
 <h3>Listado de Tonotos</h3>
 
-<div *ngIf="deletedHero; else nothingWasDeleted">
-  <h3>Tonoto borrado <small class="text-danger">{{deletedHero}}</small></h3>
-</div>
-
-<ng-template #nothingWasDeleted>
+@if (deletedHero) {
+  <div>
+    <h3>Tonoto borrado <small class="text-danger">{{deletedHero}}</small></h3>
+  </div>
+} @else {
   <h3>No ha borrado nada.</h3>
-</ng-template>
+}
 
-<button *ngIf="heroNames.length > 0"
-(click)="removeLastHero()"
-class="btn btn-outline-danger">
-  Borrar último tonoto
-</button>
+
+@if (heroNames.length > 0) {
+  <button
+    (click)="removeLastHero()"
+    class="btn btn-outline-danger">
+    Borrar último tonoto
+  </button>
+}
 
 <ul class="mt-2 list-group">
-  <li *ngFor="let name of heroNames" class="list-group-item">{{name}}
-  </li>
+  @for (name of heroNames; track name) {
+    <li class="list-group-item">{{name}}
+    </li>
+  }
 </ul>
